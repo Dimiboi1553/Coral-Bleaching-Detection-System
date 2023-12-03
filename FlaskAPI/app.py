@@ -3,11 +3,10 @@ import tensorflow as tf
 import numpy as np
 import cv2
 import os
-import uuid  # Import the uuid module for generating unique filenames
+import uuid
 
 app = Flask(__name__)
 
-# Load your TensorFlow model
 model = tf.keras.models.load_model('FinishedModel.h5')
 
 @app.route('/')
@@ -24,7 +23,6 @@ def predict():
         unique_filename = str(uuid.uuid4()) + '.jpg'
         image_path = os.path.join('static', unique_filename)
 
-        # Save the image to the static folder with a unique filename
         file.save(image_path)
 
         # Preprocess the image using OpenCV
