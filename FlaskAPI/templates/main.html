@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IPrediction</title>
+<style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FEEEF3;
+            color: #EF347B;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type="file"] {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            align-items: center;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #EF347B;
+            color: #1E010E ;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color:#A4E9EA;
+        }
+</style>
+</head>
+<body>
+<h3> <centre>CORAL REEF HEALTH PREDICTION </centre></h3>
+<form action="/predict" method="post" enctype="multipart/form-data">
+<input type="file" name="file" accept="image/*">
+<input type="submit" value="Predict">
+</form>
+</body>
+</html>
